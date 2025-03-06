@@ -1,0 +1,94 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding-top: 0; /* Reset the padding-top */
+    background-color: rgb(131, 131, 238); /* Light background color */
+    color: #ffffff;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 36px;
+    color: #003366; /* Dark color for better contrast */
+    text-transform: uppercase; /* Makes it look more structured */
+}
+
+/* Styling for h3 */
+h3 {
+    color: #003366; /* Dark color for contrast */
+    font-size: 24px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover effect for h3 */
+h3:hover {
+    color: #007bff;
+    text-decoration: underline;
+}
+
+/* Styling for paragraphs (p) */
+p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #ddd;
+}
+
+/* Hover effect for paragraphs */
+p:hover {
+    color: #ffffff;
+}
+
+/* Styling for images */
+img {
+    width: 100%; /* Ensures images fill the column */
+    height: 200px; /* Fixed height to maintain consistency */
+    object-fit: cover; /* Ensures images are not distorted */
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition for images */
+    margin-bottom: 10px;
+}
+
+/* Hover effect for images */
+img:hover {
+    transform: scale(1.1); /* Slightly enlarge the image */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
+}
+
+/* Optional: Image border effect */
+img:hover {
+    border-color: #007bff; /* Add border on hover */
+}
+
+/* Responsive layout for mobile devices */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    img {
+        height: 180px; /* Adjust image height for smaller screens */
+    }
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Container for better layout */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Column spacing */
+.col-md-4 {
+    margin-bottom: 20px;
+}

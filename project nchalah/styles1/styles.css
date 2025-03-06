@@ -1,0 +1,484 @@
+body{font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding-top: 0; /* Reset the padding-top */
+    background-color: rgb(131, 131, 238) ; /* Light background color */
+    color:#ffffff;
+}
+.title{
+    font-weight: bolder;
+    color: #007bff;
+}
+
+/* Navbar Styling */
+#navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: #1a1a1a;
+    color: #fff;
+    height: 80px;
+    display: flex;
+    justify-content: space-between; /* Keeps space between logo and navbar items */
+    align-items: center;
+    padding: 0 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Navbar Links */
+#navbar .navbar-nav {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    justify-content: flex-end; /* Align items to the right */
+    width: 100%; /* Ensures navbar takes up full width */
+}
+
+/* Navbar Links Style */
+#navbar .navbar-nav .nav-item {
+    margin-right: 20px;
+}
+
+/* Navbar Links Style */
+#navbar .navbar-nav .nav-link {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Hover effect on navbar links */
+#navbar .navbar-nav .nav-link:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Navbar Button */
+#navbar .navbar-btn {
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Button Hover Effect */
+#navbar .navbar-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Navbar Right Side - Align buttons to the right */
+#navbar .navbar-btn-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/* Mobile Navbar (Responsive) */
+@media (max-width: 768px) {
+    #navbar {
+        flex-direction: column;
+        padding: 10px;
+        height: auto;
+    }
+
+    #navbar .navbar-nav {
+        flex-direction: column;
+        width: 100%;
+        justify-content: center; /* Center the links on mobile */
+    }
+
+    #navbar .navbar-nav .nav-item {
+        margin-right: 0;
+        margin-bottom: 10px;
+        width: 100%;
+        text-align: left;
+    }
+
+    #navbar .navbar-btn-container {
+        margin-top: 20px;
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Optional: If you want to style the navbar when scrolled */
+#navbar.scrolled {
+    background-color: #000;
+}
+
+/* Styling for Search Bar */
+#navbar form {
+    display: flex;
+    align-items: center;
+}
+
+#navbar .form-control {
+    width: 200px;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    transition: border 0.3s;
+}
+
+#navbar .form-control:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+#navbar .btn-outline-light {
+    border-radius: 5px;
+    color: #fff;
+    background-color: transparent;
+    border: 1px solid #fff;
+    padding: 5px 15px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#navbar .btn-outline-light:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Logo Styling */
+.logo {
+    display:flex;
+    width: 100px; /* Set the width */
+    height: 100px; /* Set the height */
+    border-radius: 50%; /* Make it circular */
+    object-fit: cover; /* Ensure the image fits nicely */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+    margin-right: 15px; /* Add spacing to the right */
+}
+
+.logo:hover {
+    transform: scale(1.1); /* Slight zoom-in effect on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+#account-icon{
+    font-size: 1.5rem;
+    height: 20px;
+    position: relative;
+}
+
+/* Ensure the header starts below the navbar */
+header {
+    padding-top: 80px; /* Add padding to account for the navbar height */
+}
+
+header {
+    height: 100vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 0; /* Remove top margin */
+    animation: slideshow 15s infinite;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Keyframes for the diaporama */
+@keyframes slideshow {
+    0% {
+        background-image: url('../images/FOOTERIMGG.jpg');
+    }
+    33% {
+        background-image: url('../images/2.jpg');
+    }
+    66% {
+        background-image: url('../images/wooden-desk-stack-textbooks-graduation-cap-symbolizing-back-to-university-background-features-copy-space-text-high-327484026.png.webp');
+    }
+    100% {
+        background-image: url('../images/FOOTERIMGG.jpg');
+    }
+}
+
+.logo-absolute {
+    position: absolute;
+    top: 100%;
+    right: 20px; /* Ajustez les valeurs top et right selon vos besoins */
+    height: 20%;
+}
+/* Scroll Effect */
+.header-section.scrolled {
+    background-position: center top;
+    background-size: 120%;
+    transition: background-size 0.3s ease, background-position 0.3s ease;
+}
+
+/* Header Box */
+.header-box {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    text-align: left;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 40px;
+    border-radius: 4px;
+    width: 80%;
+    max-width: 500px;
+}
+
+.header-description {
+    font-size: 1.2rem;
+    margin: 20px 0;
+    color: #f8f9fa;
+}
+
+.header-buttons a {
+    font-size: 1.1rem;
+    text-decoration: none;
+}
+
+.header-buttons .btn-light {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.header-buttons .btn-light:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Faculty and Resource Cards */
+.faculty-card, .resource-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    color:black;
+}
+
+.faculty-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+/* Hover Effects */
+.faculty-card:hover, .resource-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.faculty-img:hover {
+    transform: scale(1.1);
+}
+
+.faculty-card h3 {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+.faculty-card p {
+    font-size: 1rem;
+    color: #333;
+}
+
+.faculty-card .btn {
+    text-decoration: none;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px; /* Adjusted border radius */
+    margin-top: 10px;
+    transition: background-color 0.3s, transform 0.3s ease;
+}
+
+/* Button Hover Effects */
+.faculty-card .btn:hover, .resource-card .btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Global Section */
+.global {
+    height: 400px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    animation: global-slideshow 15s infinite;
+}
+
+/* Keyframes for diaporama */
+@keyframes global-slideshow {
+    0% {
+        background-image: url('../images/global.jpg');
+    }
+    33% {
+        background-image: url('../images/LOCALISATION.JPG');
+    }
+    66% {
+        background-image: url('../images/N.webp');
+    }
+    100% {
+        background-image: url('../images/global.jpg');
+    }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .faculty-card, .resource-card {
+        margin-bottom: 30px;
+    }
+    .faculty-img {
+        height: 150px;
+    }
+}
+
+/* Footer Section */
+.footer-section {
+    background-color: #343a40;
+    color: white;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.footer-section h5 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.footer-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.social-icons a {
+    transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: scale(1.1);
+}
+
+.social-icons i {
+    font-size: 1.5rem;
+}
+
+.footer-section .text-white {
+    text-decoration: none;
+}
+
+.footer-section .text-white:hover {
+    color: #17a2b8;
+}
+
+@media (max-width: 768px) {
+    .footer-section {
+        text-align: center;
+    }
+    .footer-section h5 {
+        font-size: 1.2rem;
+    }
+    .footer-section p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Footer Styling */
+footer {
+    position: relative;
+    padding: 30px 0;
+}
+
+.footer-left {
+    text-align: left;
+}
+
+.footer-right {
+    text-align: right;
+}
+
+.footer-left p {
+    margin-bottom: 10px;
+}
+
+.footer-left a {
+    font-size: 1rem;
+    margin-right: 20px;
+    text-decoration: none;
+}
+
+.footer-left a:hover {
+    text-decoration: underline;
+}
+
+/* QR Code Styling */
+.footer-right img {
+    max-width: 150px;
+    height: auto;
+}
+
+/* See More Button Styling */
+.btn-lg {
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px; /* Simpler border-radius */
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-lg:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.text-center .btn-lg {
+    margin-top: 20px;
+}
+
+/* Global Button Styling */
+.btn {
+    font-size: 1rem;
+    padding: 12px 25px;
+    background-color: #007bff; /* Primary blue */
+    color: white;
+    border: 2px solid transparent;
+    border-radius: 4px; /* Reduced border-radius for cleaner look */
+    transition: background-color 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/*page faculties -------------------------------------------*/
+.faculty-card {
+    margin-top: 20px;  /* Add top margin */
+    margin-bottom: 20px;  /* Add bottom margin */
+}

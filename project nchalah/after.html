@@ -1,0 +1,40 @@
+<!-- Navbar Section -->
+<nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+        <!-- Left Logo -->
+        <div class="d-flex align-items-center">
+            <img src="studentlife.webp" alt="NSSTUDENT Logo" width="50px" height="50px" class="logo me-2">
+            <a class="navbar-brand" href="#">NSSTUDENT</a>
+        </div>
+
+        <!-- Navbar Toggler Button for Small Screens -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar Links -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#header">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#faculties">Faculties</a></li>
+                <li class="nav-item"><a class="nav-link" href="#global">Global Opportunities</a></li>
+                <li class="nav-item"><a class="nav-link" href="#resources">Resources</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+
+                <!-- Show 'Login' Button if not logged in -->
+                <li class="nav-item" id="login-item">
+                    <a class="btn btn-light btn-sm ms-2" href="#connexion">Connexion</a>
+                </li>
+
+                <!-- Show Username if logged in (Placeholder) -->
+                <li class="nav-item" id="user-item" style="display:none;">
+                    <span class="nav-link" id="user-name">John Doe</span> <!-- Placeholder for user's name -->
+                    <a href="#" class="nav-link ms-2">
+                        <i class="fas fa-sign-out-alt"></i> Logout
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

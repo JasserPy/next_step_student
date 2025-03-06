@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommendation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url("/static/img.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            color: white;
+            font-weight: bolder;
+            font-size: large;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .slide-in {
+            animation: slideIn 0.8s ease-in-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .alert {
+            animation: bounceIn 0.8s ease-in-out;
+        }
+
+        @keyframes bounceIn {
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                transform: translateY(0);
+            }
+
+            40% {
+                transform: translateY(-10px);
+            }
+
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+
+        .robot-image {
+            width: 150px;
+            margin-bottom: 20px;
+        }
+
+        .result-container {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .recommendation-box {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 40px;
+            border-radius: 15px;
+            margin-top: 30px;
+            animation: slideIn 0.8s ease-in-out;
+        }
+
+        .recommendation-box h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .btn-custom {
+            background-color: #00aaff;
+            color: white;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .btn-custom:hover {
+            background-color: #0077cc;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="result-container">
+        <div class="recommendation-box">
+            <h1>Your Recommended Study Program</h1>
+            <p>Based on your answers, we recommend the following program:</p>
+            <h2>{{ recommendation }}</h2>
+            <a href="{{ url_for('home') }}" class="btn-custom mt-4">Go back to the start</a>
+        </div>
+    </div>
+</body>
+
+</html>
